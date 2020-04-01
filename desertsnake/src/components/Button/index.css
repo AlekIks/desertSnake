@@ -20,7 +20,8 @@ button:active{
     background: #654321;
 }
 button:focus{
-    box-shadow: 0 0 0 2px #015c65, 0 0 0 4px #015c65;
+    box-shadow: 0 0 0 2px #015c65, 
+                0 0 0 4px #015c65;
     outline: none;
 }
 button[disabled] {
@@ -40,4 +41,30 @@ button.blue{
 
 button.blue:hover{
     background: #41e4f3;
+}
+
+button.blue[disabled]{
+    opacity: 0.48;
+    pointer-events: none;
+    user-select: none;
+}
+
+/*
+////////////////////////////////////////////
+BLUE BIG BUTTONS
+*/
+
+button.blue.big{
+    height: 200px;
+    width: 25%;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: sans-serif;
+    border-radius: 0px;
+}
+
+button.blue.big:hover{
+    background: #41e4f3;
+    box-shadow: 0 15px 20px #000000;
+    transform: translateY(-5px);
 }

@@ -1,0 +1,17 @@
+input{
+    height: 40px;
+    font-size: 15px;
+    padding: 0 10px;
+    border-radius: 100px;
+    margin: 4px;
+}
+input:focus{
+    box-shadow: 0 0 0 2px #015c65, 
+                0 0 0 4px #015c65;
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus{
+    box-shadow: 0 0 0 1000px #edf8f6 inset,
+                0 0 0 4px #edf8f6;
+}

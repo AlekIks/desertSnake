@@ -1,6 +1,29 @@
- .login_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+.login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 25%;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  box-shadow: 1px 2px 10px 0px #c5c5c5;
+  padding: 12px 20px 20px;
+}
+
+.login_form > *{
+  margin-bottom: 20px;
+}
+
+.login_form.footer.button:first-child{
+  margin-right: 200px;
+}
+
+header,
+footer{
+  text-align: center;
+}
+
+.login_form.wrapper__form{
+  margin: auto;
+}

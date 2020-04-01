@@ -3,25 +3,38 @@
 ### Что это?
 Сайт полиграфии с блэкджеком.
 
-## Зависимости
+## Зависимости (выполнять в ./desertsnake)
 npm install
 
-## virtual environment
-pipenv shell
-
 ## Пакеты django
-pipenv install django djangorestframework django-rest-knox
+pip install django djangorestframework django-cors-headers
 
-## Применить migrations
-python3 leadmanager/manage.py migrate
+## Как тут все устроено?
 
-## Serve API on localhost:8000
-python3 leadmanager/manage.py runserver
+| desertSnake
+|   |- desertsnake 
+|   |  обитель фронтенда
+|   |   |- public
+|   |   |  лого, картинки и прочее
+|   |   |- src
+|   |   |  магия redux и react происходит туть
+|   |   |   |- actions
+|   |   |   |  что надо обрабатывать?
+|   |   |   |- reducers
+|   |   |   |  обработчики экшенов
+|   |   |   |- components
+|   |   |   |  react-компоненты, пазлы для сбора страниц
+|   |   |   |- utils
+|   |   |   |  здесь только главный по переговорам с бэком
+|   |- server
+|   |  а здесь бэк
+|   |   |- apps
+|   |   |  модели
+|   |   |- desertsnake_project
 
-## Run webpack (from root)
-npm run dev
 
-## Build for production
-npm run build
-
-### Что надо 
+## Чтобы создавать свои приложения:
+django-admin.py startapp *app_name* apps/*app_name*
+*создать свою модель в app_name/models.py*
+python manage.py makemigrations # создать файлы миграции
+python manage.py migrate # применить изменения

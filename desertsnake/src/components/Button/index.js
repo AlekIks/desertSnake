@@ -6,7 +6,6 @@ import './index.css'
 class Button extends React.Component {
   state = {
     isClicked: false,
-    style: "button",
   }
 
   handleClick = (event) => {
@@ -21,7 +20,12 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button className={this.state.isClicked ? "red" : this.state.style} onClick={this.handleClick}>{this.props.children}</button>
+      <button class={this.props.style} 
+        onClick={this.handleClick}
+        disabled={this.props.disabled}>
+          
+          {this.props.children}
+        </button>
     );
   }
 }

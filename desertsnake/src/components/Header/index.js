@@ -6,10 +6,11 @@ import fetchUserAction from '../../actions/user'
 class Header extends Component {
   render() {
     if (this.props.isFetching) {
-      return <h1>Загрузка</h1>
+      return
+        <h1>Загрузка</h1>
     }
 
-    return <h1>Привет, {this.props.user || 'никто'}</h1>
+    return <h1>Привет, {this.props.user || '%user_name'}</h1>
   }
 
   componentDidMount() {
@@ -33,3 +34,13 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)
+
+// class Header extends Component {
+//   render() {
+//     return (
+//       <div><img src="../../../logo.png" alt="logo" width='5%'></img></div>
+//     )
+//   }
+// }
+
+// export default Header;

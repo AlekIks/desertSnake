@@ -17,7 +17,7 @@ class LoginForm extends React.Component {
     return (
       <form className="login_form" >
         <header>
-          <h2>Зарегистрироваться</h2>
+          <h2>Добро пожаловать!</h2>
         </header>
         <main>
           <Input
@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
           />
           <Input
             type="password"
-            placeholder="password"
+            placeholder="Пароль"
             onChange={(event) => {
               this.setState({ passwordValue: event.target.value })
             }}
