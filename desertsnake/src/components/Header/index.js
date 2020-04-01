@@ -3,14 +3,23 @@ import { connect } from 'react-redux'
 
 import fetchUserAction from '../../actions/user'
 
+import './index.css'
+
 class Header extends Component {
   render() {
     if (this.props.isFetching) {
-      return
-        <h1>Загрузка</h1>
+      return <p>Загрузка</p>
     }
-
-    return <h1>Привет, {this.props.user || '%user_name'}</h1>
+    return (
+      <div className="div orange">
+        <div className="div logo container">
+          <img src="../../../logo.png" alt="logo"></img>
+        </div>
+        <div className="div hello container">
+          <p> Привет, {this.props.user || '%user_name'}</p>
+        </div>
+      </div>
+    )
   }
 
   componentDidMount() {

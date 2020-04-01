@@ -1,0 +1,18 @@
+.footer{
+    position: relative;
+    background-color: #ffb573;
+    box-sizing: inherit;
+
+    height: 160px;
+}
+
+.footer.column{
+    box-sizing: border-box;
+    padding: 0 20px 20px;
+    width: 25%;
+    float: left;
+}
+
+.ul{
+    list-style: none;
+}

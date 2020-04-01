@@ -1,0 +1,31 @@
+.div.orange{
+    background-color: #ffb573;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.div.logo.container{
+    padding-left: 20px;
+    align-self: flex-start;
+    -webkit-box-pack: justify!important;
+    display: inline-block;
+    width: min-content;
+
+    margin-top: 10px;
+    margin-right: 15px;
+
+    float: left;
+}
+
+.div.hello.container{
+    padding-right: 20px;
+    align-self: flex-start;
+    width: min-content;
+    display: inline-block;
+
+    margin-top: 10px;
+
+    float: right;
+}

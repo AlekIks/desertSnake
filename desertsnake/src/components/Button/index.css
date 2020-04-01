@@ -51,10 +51,10 @@ button.blue[disabled]{
 
 /*
 ////////////////////////////////////////////
-BLUE BIG BUTTONS
+BIG BUTTONS
 */
 
-button.blue.big{
+button.big{
     height: 200px;
     width: 25%;
     font-weight: bold;
@@ -63,8 +63,7 @@ button.blue.big{
     border-radius: 0px;
 }
 
-button.blue.big:hover{
-    background: #41e4f3;
+button.big:hover{
     box-shadow: 0 15px 20px #000000;
     transform: translateY(-5px);
 }
