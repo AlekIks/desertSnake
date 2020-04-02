@@ -17,7 +17,7 @@ class LoginForm extends React.Component {
     return (
       <form className="login_form" >
         <header>
-          <h2>Добро пожаловать!</h2>
+          <h2>С возвращением!</h2>
         </header>
         <main>
           <Input

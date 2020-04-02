@@ -4,6 +4,7 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
+import SignUpForm from './components/SignUpForm';
 import Footer from './components/Footer';
 import { Switch, Route } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ function App() {
       <Header></Header>
       <Switch>
         <Route path="/login" component={LoginForm}/>
+        <Route path="/signup" component={SignUpForm}/>
         <Route path="/" component={MainPage}/>
         {/* <Route path="*" component={ErrorPage}/> */}
       </Switch>
