@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # 'apps.documents',
     'apps.users',
     'apps.authentification',
+    'apps.desertsnake',
 ]
 
 REST_FRAMEWORK = {

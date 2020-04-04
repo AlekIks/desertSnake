@@ -10,7 +10,7 @@ class Footer extends React.Component {
           <div className="footer column">
             <h3> О компании</h3>
             <ul className="ul">
-              <li><a href="">Самые крутые</a></li>
+              <li>Самые крутые</li>
               <li margin="1em 0">Самые быстрые</li>
               <li>Самые чёткие</li>
             </ul>
