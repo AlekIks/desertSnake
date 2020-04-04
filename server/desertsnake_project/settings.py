@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     # 'apps.documents',
     'apps.users',
-    'apps.authentification',
-    'apps.desertsnake',
+    'desertsnake',
 ]
 
 REST_FRAMEWORK = {
@@ -86,7 +85,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'desertsnake_project.urls'
-AUTH_USER_MODEL = 'authentification.CustomUser'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 TEMPLATES = [
     {

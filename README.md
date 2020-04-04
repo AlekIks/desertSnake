@@ -1,7 +1,7 @@
 # desertSnake
 
 ## Что это?
-Сайт полиграфии с блэкджеком.
+Недосайт полиграфии.
 
 ### Зависимости (выполнять в ./desertsnake)
 npm install
@@ -19,8 +19,6 @@ python manage.py migrate # применить изменения
 ```
 
 ### Полезные ссылки:
-```python
-https://pypi.org/project/djangorestframework-simplejwt/ # про DRF simple JWT
-https://hackernoon.com/110percent-complete-jwt-authentication-with-django-and-react-2020-iejq34ta # про авторизацию 
-https://github.com/babel/babel/issues/8655
-```
+1. [про DRF simple JWT](https://pypi.org/project/djangorestframework-simplejwt/)
+2. [про авторизацию](https://hackernoon.com/110percent-complete-jwt-authentication-with-django-and-react-2020-iejq34ta)
+3. [про то, как настраивать конфиги](https://github.com/babel/babel/issues/8655)

@@ -24,6 +24,6 @@ from rest_framework_jwt import authentication
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('apps.authentification.urls')),
-    path('', include('apps.desertsnake.urls'))
+    path('api/', include('apps.users.urls')),
+    path('', include('desertsnake.urls'))
 ]

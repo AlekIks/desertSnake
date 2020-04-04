@@ -1,24 +1,57 @@
 {
-    "name": "desertsnake",
-    "version": "1.0.0",
-    "description": "Сайт полиграфии/",
-    "main": "index.js",
-    "scripts": {
-      "start": "node desertsnake/server/server.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.17.1"
-    },
-    "devDependencies": {},
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/AlekIks/desertSnake.git"
-    },
-    "bugs": {
-      "url": "https://github.com/AlekIks/desertSnake/issues"
-    },
-    "homepage": "https://github.com/AlekIks/desertSnake#readme"
-  }
+  "name": "desertsnake",
+  "version": "1.0.0",
+  "description": "Сайт полиграфии/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./server/desertsnake/src/index.js --output ./server/desertsnake/static/main.js",
+    "build": "webpack --mode production ./server/desertsnake/src/index.js --output ./server/desertsnake/static/main.js"
+  },
+  "keywords": [],
+  "author": "Pogrebnaya Alexandra",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.3.0",
+    "@testing-library/react": "^10.0.2",
+    "@testing-library/user-event": "^10.0.1",
+    "core-js": "^3.6.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.13.1",
+    "react-alert": "^7.0.0",
+    "react-alert-template-basic": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.3.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlekIks/desertSnake.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlekIks/desertSnake/issues"
+  },
+  "homepage": "https://github.com/AlekIks/desertSnake#readme"
+}
