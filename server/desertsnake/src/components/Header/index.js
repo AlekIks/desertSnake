@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import fetchUserAction from '../../actions/user'
 
 import './index.css'
+import logo from '../../../public/logo.png'
 
 class Header extends Component {
   render() {
@@ -13,10 +14,10 @@ class Header extends Component {
     return (
       <div className="div orange">
         <div className="div logo container">
-          <img src="../../../logo.png" alt="logo"></img>
+          <img src={logo} alt="logo"></img>
         </div>
         <div className="div hello container">
-          <p> Привет, {this.props.user || '%user_name'}</p>
+          <p> Привет, {this.props.user || '<user_name>!'}</p>
         </div>
       </div>
     )
