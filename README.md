@@ -35,3 +35,4 @@ python3 server/manage.py runserver
 3. [про авторизацию и про actions (топ туториал 2)](http://v1k45.com/blog/modern-django-part-4-adding-authentication-to-react-spa-using-drf/)
 4. [еще про авторизацию](https://sloboda-studio.com/blog/how-to-make-react-django-combination-work-like-magic/)
 5. [про то, как настраивать конфиги](https://github.com/babel/babel/issues/8655)
+6. [инструкция по деплою на google cloude)](https://cloud.google.com/python/django/appengine)
