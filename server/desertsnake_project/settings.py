@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    # 'apps.documents',
+    'apps.documents',
     'apps.users',
+    'apps.products',
     'desertsnake',
 ]
 

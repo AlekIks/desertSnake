@@ -1,11 +1,13 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 import Input from '../Input'
 import Button from '../Button'
-import http from '../../utils/http'
+import { Link, Redirect } from 'react-router-dom';
+// import http from '../../utils/http'
 
 import './index.css'
+import {auth} from "../../actions"
+import { registerUser } from '../../actions/auth';
 
 class SignUpForm extends React.Component {
   state = {
@@ -83,14 +85,19 @@ class SignUpForm extends React.Component {
 
         </main>
         <footer>
-          <Button onClick={() => {
-            http('signup', 'POST', {
-              login: this.state.emailValue,
-              password: this.state.passwordValue
-            })
-          }}>
-          Зарегистрироваться
-          </Button>
+          <Link to="/">
+            <Button onClick={() => {
+              registerUser(
+                this.state.nameValue,
+                this.state.surnameValue,
+                this.state.phoneValue,
+                this.state.emailValue,
+                this.state.passwordValue
+                )
+            }}>
+            Зарегистрироваться
+            </Button>
+          </Link>
         </footer>
       </form>
     );

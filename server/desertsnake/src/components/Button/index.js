@@ -8,20 +8,11 @@ class Button extends React.Component {
     isClicked: false,
   }
 
-  handleClick = (event) => {
-      event.preventDefault()
-
-      console.log('button clicked')
-
-      // this.setState({isClicked: true})
-
-      this.props.onClick(event)
-  }
 
   render() {
     return (
-      <button class={this.props.style} 
-        onClick={this.handleClick}
+      <button className={this.props.style} 
+        onClick={this.props.handleClick}
         disabled={this.props.disabled}>
           
           {this.props.children}

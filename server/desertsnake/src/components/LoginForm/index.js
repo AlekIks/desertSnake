@@ -1,17 +1,25 @@
 import React from 'react';
+import { Link, Redirect } from 'react-router-dom';
 
 import Input from '../Input'
 import Button from '../Button'
 
 import './index.css'
 import '../../axiosApi'
-import { Link } from 'react-router-dom';
+
+import {auth} from "../../actions"
 
 class LoginForm extends React.Component {
-  state = {
-    emailValue: '',
-    passwordValue: ''
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      emailValue: '',
+      passwordValue: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
   handleChange(event) {
     this.setState({[event.target.name]: event.target.value});
@@ -19,28 +27,12 @@ class LoginForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    try {
-        const response = axiosInstance.post('/token/obtain/', {
-            username: this.state.username,
-            password: this.state.password
-        });
-        axiosInstance.defaults.headers['Authorization'] = "JWT " + response.data.access;
-        localStorage.setItem('access_token', response.data.access);
-        localStorage.setItem('refresh_token', response.data.refresh);
-        return data;
-    } catch (error) {
-        throw error;
-      }
-  }
-
-  handleRegistration = () => {
-    return  <Link to="/signup"></Link>;
+    this.props.loginUser(this.state.emailValue, this.state.passwordValue);
   }
 
   render() {
-
     return (
-      <form className="login_form" >
+      <form className="login_form" onSubmit={this.handleSubmit}>
         <header>
           <h2>С возвращением!</h2>
         </header>
@@ -59,12 +51,13 @@ class LoginForm extends React.Component {
           />
         </main>
         <footer>
-          <Button onClick={this.handleSubmit}>
+          <Button type="submit">
           Войти
           </Button>
 
-          <Button onClick={this.handleRegistration}>
-          Зарегистрироваться</ Button>
+          <Link to="/signup">
+            <Button> Зарегистрироваться</ Button>
+          </Link>
         </footer>
       </form>
     );
